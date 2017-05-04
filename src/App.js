@@ -4,10 +4,10 @@
 
 
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
-import { Button, Nav, NavItem, MenuItem, NavDropdown, Navbar, Grid, Col, Row} from 'react-bootstrap';
+import { Button, Nav, NavItem, MenuItem, NavDropdown, Navbar, Grid, Col, Row, Jumbotron, Image} from 'react-bootstrap';
 
 
 
@@ -41,30 +41,30 @@ class App extends Component {
         );
 
 
-        const gridInstance = (
-          <Grid>
-            <Row className="show-grid">
-              <Col xs={12} md={4} className="black"><code>&lt;{'Col xs={12} md={8}'} /&gt;</code></Col>
-              <Col xs={6} md={4} className="green"><code>&lt;{'Col xs={6} md={4}'} /&gt;</code></Col>
-              <Col xs={6} md={4} className="pink">Pink baby!</Col>
-            </Row>
-
-            <Row className="show-grid">
-              <Col xs={6} md={4} className="green"><code>&lt;{'Col xs={6} md={4}'} /&gt;</code></Col>
-              <Col xs={6} md={4} className="pink"><code>&lt;{'Col xs={6} md={4}'} /&gt;</code></Col>
-              <Col xsHidden md={4} className="orange"><code>&lt;{'Col xsHidden md={4}'} /&gt;</code></Col>
-            </Row>
-
-            <Row className="show-grid">
-              <Col xs={6} xsOffset={6} className="black"><code>&lt;{'Col xs={6} xsOffset={6}'} /&gt;</code></Col>
-            </Row>
-
-            <Row className="show-grid">
-              <Col md={6} mdPush={6} className="green"><code>&lt;{'Col md={6} mdPush={6}'} /&gt;</code></Col>
-              <Col md={6} mdPull={6} className="orange"><code>&lt;{'Col md={6} mdPull={6}'} /&gt;</code></Col>
-            </Row>
-          </Grid>
-        );
+        // const gridInstance = (
+        //   <Grid>
+        //     <Row className="show-grid">
+        //       <Col xs={12} md={4} className="black"><code>&lt;{'Col xs={12} md={8}'} /&gt;</code></Col>
+        //       <Col xs={6} md={4} className="green"><code>&lt;{'Col xs={6} md={4}'} /&gt;</code></Col>
+        //       <Col xs={6} md={4} className="pink">Pink baby!</Col>
+        //     </Row>
+        //
+        //     <Row className="show-grid">
+        //       <Col xs={6} md={4} className="green"><code>&lt;{'Col xs={6} md={4}'} /&gt;</code></Col>
+        //       <Col xs={6} md={4} className="pink"><code>&lt;{'Col xs={6} md={4}'} /&gt;</code></Col>
+        //       <Col xsHidden md={4} className="orange"><code>&lt;{'Col xsHidden md={4}'} /&gt;</code></Col>
+        //     </Row>
+        //
+        //     <Row className="show-grid">
+        //       <Col xs={6} xsOffset={6} className="black"><code>&lt;{'Col xs={6} xsOffset={6}'} /&gt;</code></Col>
+        //     </Row>
+        //
+        //     <Row className="show-grid">
+        //       <Col md={6} mdPush={6} className="green"><code>&lt;{'Col md={6} mdPush={6}'} /&gt;</code></Col>
+        //       <Col md={6} mdPull={6} className="orange"><code>&lt;{'Col md={6} mdPull={6}'} /&gt;</code></Col>
+        //     </Row>
+        //   </Grid>
+        // );
 
 
 
@@ -92,23 +92,41 @@ class App extends Component {
         //     </Row>
         //   </Grid>
         // );
-
-
+        const jumbotronInstance = (
+          <Jumbotron>
+            <h1>Welcome to Vampire Class!</h1>
+            <p>Learn how to seduce with your piercing eyes</p>
+            <p><Button bsStyle="primary">Bite Here</Button></p>
+          </Jumbotron>
+        );
 
 
     return (
       <div className="App">
 
         {navbarInstance}
-        {gridInstance}
+        {jumbotronInstance}
 
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <Grid>
+          <Row>
+            <Col md={6} mdPush={6} className="green">
+            Allergies of a Vampire
+              <ul>
+                <li>Garlic(obviously)</li>
+                <li>Holy Crosses</li>
+              </ul>
+            </Col>
+            <Col md={6} mdPull={6} className="orange">
+              Pros and Cons of falling in love with a mortal
+              <div className="match-item-wrapper">
+                <div className="match-item">
+                <Image className="browse-pic" src="http://www.heroesandheartbreakers.com/images/stories/November2012/Hyland-Vampire-Couples-Twilight-466.jpg"  />
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Grid>
 
         <button>hola</button>
         <Button>Que Pasa?</Button>

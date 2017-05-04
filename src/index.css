@@ -20,3 +20,37 @@ body {
 .pink{
     background-color: pink;
 }
+
+#image{
+  height: 300px;
+  width: 300px;
+}
+
+.match-item-wrapper {
+  float: left;
+  position: relative;
+  width: 280px;
+  height: 385px;
+  margin: 0 10px 40px 10px;
+}
+
+.match-item {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 385px;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.browse-pic {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  object-fit: cover;
+  transition: height 0.5s ease;
+  height: 225px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
